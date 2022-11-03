@@ -1,0 +1,62 @@
+
+
+ 
+ 
+
+
+            
+                  <div class="row">
+
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col" style="text-align: right;">
+                      <a class="btn btn-primary" href="/add"> Ajouter</a>
+
+                 
+                    </div>
+                  </div>
+                  <br>
+
+             
+        
+         
+              <table class="table"  aria-label="Dessert calories">
+                <thead>
+                  <tr class="mdc-data-table__header-row">
+                 
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col" >Titre</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Auteur</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Date</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Action</th>
+                
+              
+                
+                  </tr>
+                </thead>
+                <tbody class="mdc-data-table__content">
+
+
+                    <% mydata.forEach(function(data){  %>
+                  <tr data-row-id="u0" class="mdc-data-table__row">
+                 
+                  
+                    <th class="mdc-data-table__cell" scope="row" id="u0" ><%= data.titre %></th>
+                    <td class="mdc-data-table__cell"><%= data.auteur %></td>
+                    <td class="mdc-data-table__cell"><%= moment(data.date_articles).lang("fr").format(' D MMMM YYYY')  %></td>
+                    <td class="mdc-data-table__cell"><a href="articles/delete?id=<%= data.id %>"><span class="fa fa-trash"></span></a></span> | <a href="articles/update?id=<%= data.id %>"><span class="fa fa-pencil-square-o"></span></a></td>
+                
+                
+                  </tr>
+                  <%  } );  %>
+              
+              
+                </tbody>
+              </table>
+     
+
+       
+
+
+
+  
+

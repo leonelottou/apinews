@@ -1,0 +1,29 @@
+
+<a href="/article"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour à la liste </a>
+<br> <br>
+
+<form name="forme" method="POST" action="/verif_update?id=<%= mydata.id %>">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Titre</label>
+      <input type="text" value="<%= mydata.titre %>"  required  class="form-control" name="titre" id="titre">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Description</label>
+        <input type="text" value="<%= mydata.description %>" class="form-control" aria-describedby="emailHelp" name="description">
+  
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Auteur</label>
+      <input type="text" value="<%= mydata.auteur %>" class="form-control"  name="auteur">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Contenu</label>
+        <textarea class="form-control"  rows="3" name="contenu"><%= mydata.contenu %></textarea>
+      </div>
+      
+  
+    <button type="submit" class="btn btn-primary">Valider</button>
+  </form>

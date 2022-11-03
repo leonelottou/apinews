@@ -1,0 +1,52 @@
+
+ 
+ 
+
+
+
+                <div style="height:95%; overflow-y: scroll;">
+
+
+        
+         
+              <table class="table table-striped"  aria-label="Dessert calories">
+                <thead>
+                  <tr class="mdc-data-table__header-row">
+                 
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col" >Titre</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Auteur</th>
+                    <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Date</th>
+                
+              
+                
+                  </tr>
+                </thead>
+                <tbody class="mdc-data-table__content">
+
+
+                    <% mydata.forEach(function(data){  %>
+                  <tr data-row-id="u0" class="mdc-data-table__row">
+                 
+                  
+                    <th class="mdc-data-table__cell" scope="row" id="u0" ><%= data.title %></th>
+                    <td class="mdc-data-table__cell"><%= data.author %></td>
+                    <td class="mdc-data-table__cell"><%= data.publishedAt %></td>
+                
+                
+                  </tr>
+                  <%  } );  %>
+              
+              
+                </tbody>
+              </table>
+     
+            </div>
+       
+
+
+
+  
+
+
+
+
